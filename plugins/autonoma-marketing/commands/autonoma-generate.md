@@ -1,24 +1,20 @@
 ---
-description: Generate high-quality marketing content through a multi-step pipeline with automatic peer review and quality scoring.
+description: Generate content through a two-perspective pipeline — Creator writes, Reviewer scores on 9 dimensions (craft + reader psychology).
 argument-hint: "[platform] [topic]"
+model: opus
 ---
 
 # Generate Content
 
-> Unlike single-shot content generation, this command runs a **two-perspective pipeline**: first a Creator writes the content, then a Reviewer evaluates it with a 6-dimension quality rubric. Only content scoring >= 4.0/5.0 is delivered.
-
-## Trigger
-
-User runs `/autonoma:generate` or asks to create, write, or draft marketing content.
+> Two-perspective pipeline: Creator writes, then Reviewer evaluates with a 9-dimension rubric covering craft quality AND reader emotional impact. Only content scoring >= 4.0/5.0 is delivered.
 
 ## Inputs
 
-Gather these before generating:
+Gather these before generating (infer from arguments if provided):
 
 1. **Platform** — linkedin, twitter, blog, email, landing-page (default: linkedin)
 2. **Topic** — what the content is about
 3. **Content type** — post, article, thread, newsletter, ad-copy (infer from platform if not specified)
-4. **Trends context** (optional) — run `/autonoma:trends` first for timely content
 
 ## Step 1: Creator Perspective
 
@@ -35,21 +31,39 @@ Save the draft to a file: `drafts/[platform]-[topic-slug]-v1.md`
 
 ## Step 2: Reviewer Perspective
 
-Now switch to a **critical editor perspective**. You are no longer the creator — you are evaluating someone else's work with brutal honesty.
+Now switch to a **critical editor AND reader psychology perspective**. You are no longer the creator — you are evaluating someone else's work.
 
-Score the draft on these 6 dimensions (1-5 each):
+IMPORTANT: Be calibrated. Most content is a 3. A 4 means genuinely good. A 5 is rare.
+
+### Part A: Craft Quality (6 dimensions)
 
 | Dimension | Weight | What 5 means |
 |-----------|--------|---------------|
-| Hook Power | 20% | Impossible to stop reading |
-| Authenticity | 20% | Genuine voice, specific details, conversational |
-| Value Density | 20% | Every sentence delivers insight, zero filler |
-| Engagement Potential | 15% | Will definitely spark comments and shares |
+| Hook Power | 15% | Impossible to stop reading |
+| Authenticity | 15% | Genuine voice, specific details, conversational |
+| Value Density | 15% | Every sentence delivers insight, zero filler |
 | Credibility | 15% | Concrete numbers, real examples cited |
-| Platform Optimization | 10% | Perfect format for the platform |
+| Engagement Potential | 10% | Will definitely spark comments and shares |
+| Platform Optimization | 5% | Perfect format for the platform |
 
-Calculate weighted average. Both conditions must pass:
-- **Weighted average >= 4.0**
+### Part B: Reader Perspective (3 dimensions)
+
+Put yourself in the reader's shoes. You are a busy professional scrolling your feed.
+
+| Dimension | Weight | What 5 means |
+|-----------|--------|---------------|
+| Emotional Resonance | 10% | Reader feels something strong (surprise, recognition, urgency) |
+| Perceived Intent | 10% | "This person genuinely wants to help me." Feels generous |
+| Trust Signal | 5% | "I want to follow this person." Builds real authority |
+
+### Sentiment Summary
+
+Write 2-3 sentences: How does this content feel from the reader's perspective? What emotion does it trigger? What impression does it leave about the author?
+
+### Quality Gate
+
+Both conditions must pass:
+- **Weighted average >= 4.0** (across all 9 dimensions)
 - **No single dimension below 3.0**
 
 ## Step 3: Iterate or Deliver
@@ -60,31 +74,38 @@ Calculate weighted average. Both conditions must pass:
 - Ask if the user wants to revise, distribute, or approve
 
 **If score < 4.0** (fails quality gate):
-- Show the score breakdown and specific feedback
-- Rewrite addressing ALL feedback points
+- Show the score breakdown, sentiment summary, and specific feedback
+- Rewrite addressing ALL feedback points (especially low reader-perspective scores)
 - Re-score the revision
 - Maximum 3 revision cycles
-- Keep the best version (degradation protection: if revision scores lower, keep the previous version)
+- Keep the best version (degradation protection)
 
 ## Output
 
 Present the final content with:
 
 ```
-## Quality Scorecard
+CRAFT QUALITY
 Hook Power:              [score]/5
 Authenticity:            [score]/5
 Value Density:           [score]/5
-Engagement Potential:    [score]/5
 Credibility:             [score]/5
+Engagement Potential:    [score]/5
 Platform Optimization:   [score]/5
+
+READER PERSPECTIVE
+Emotional Resonance:     [score]/5
+Perceived Intent:        [score]/5
+Trust Signal:            [score]/5
 ─────────────────────────────────
-Weighted Average:        [score]/5.0 ✅ PASS / ❌ FAIL
+Weighted Average:        [score]/5.0 PASS/FAIL
 Revisions:               [count]/3
+
+Sentiment: [2-3 sentence summary of how the reader feels]
 ```
 
 Then ask: "Would you like to:
 - Approve and save as final
 - Request specific changes
-- Adapt for other platforms (`/autonoma:distribute`)
+- Adapt for other platforms (`/autonoma-distribute`)
 - Generate more content on related topics"
