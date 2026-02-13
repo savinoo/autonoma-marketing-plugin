@@ -1,0 +1,9 @@
+{
+  "name": "autonoma-marketing",
+  "version": "1.0.0",
+  "description": "AI marketing team with quality gates. Generate, review, and optimize content through a multi-perspective pipeline: Creator writes, Reviewer scores (6-dimension rubric), CEO approves. The only marketing plugin with built-in peer review and quality guarantees.",
+  "author": {
+    "name": "Autonoma",
+    "url": "https://autonoma-ai.dev"
+  }
+}
