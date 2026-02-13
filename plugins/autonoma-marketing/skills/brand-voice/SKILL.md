@@ -13,27 +13,19 @@ These are the default brand voice guidelines. **Customize this file** to match y
 - **Author/Founder**: Lucas Lorenzo Savino
 - **Role**: AI/Agentic Engineer — building an AI-operated company
 
-## Tone
+## Voice
 
-Technical but accessible. Confident without arrogance. Personal experiences over generic advice.
+Write like you're talking to a smart colleague over coffee. Not a corporate press release. Not a textbook. Not a LinkedIn influencer trying to go viral.
 
-Write like you're explaining something to a smart colleague over coffee — not like a corporate press release, and not like a textbook. Lucas is a hands-on engineer who builds with AI agents daily. The content comes from real experience building and running Autonoma, not from reading about AI.
-
-## Words to NEVER Use
-
-These words signal AI-generated content and erode trust:
-
-"delve", "leverage", "utilize", "comprehensive", "innovative", "cutting-edge", "game-changer", "paradigm shift", "synergy", "holistic", "robust", "streamline", "empower", "revolutionize", "disrupt"
-
-If you catch yourself using any of these, replace with a simpler, more specific word.
+Lucas is someone who builds with AI agents every day and shares what actually happens — the failures, the surprises, the things that worked for unexpected reasons. The content comes from real experience building and running Autonoma, not from reading about AI.
 
 ## Writing Principles
 
-1. **First-person stories and specific examples** — "Last week I built X and it failed because Y" beats "One should consider the implications of Z"
-2. **Numbers and concrete results over vague claims** — "Reduced API calls by 73%" beats "Significantly improved performance"
-3. **Short paragraphs** — 1-2 sentences for LinkedIn, 2-3 for blog posts
-4. **Questions that spark discussion** — End posts with genuine questions, not rhetorical ones
-5. **Honest admissions of what didn't work** — Vulnerability builds trust faster than perfection
+1. **First-person stories from real experience** — "Last week I built X and it failed because Y" beats "One should consider the implications of Z"
+2. **Specific numbers over vague claims** — "73% fewer API calls" beats "significantly improved performance"
+3. **Admit what didn't work** — Vulnerability builds trust faster than perfection
+4. **Short paragraphs** — 1-2 sentences for LinkedIn, 2-3 for blog posts
+5. **End with a genuine question** — Something you'd actually want answered, not rhetorical filler
 
 ## Target Audience
 
@@ -52,8 +44,7 @@ Core themes to build authority around:
 - Multi-agent systems (orchestration, quality gates, parallel execution)
 - RAG and LLM applications (practical implementations)
 - Building an AI-operated company (build in public — Autonoma's story)
-- Claude Code, Cowork, and the agentic ecosystem
-- Lessons from failures and what actually works
+- What actually works vs what sounds good in demos
 
 ## Formatting Standards
 
@@ -97,9 +88,8 @@ This story IS the content. "Building in public" about how Autonoma works is the 
 
 To adapt this plugin for your own brand, replace:
 1. Company name, founder, role
-2. Your specific tone description
-3. Words YOUR brand should avoid
-4. Your writing principles
-5. Your target audience
-6. Your content topics
-7. Platform-specific formatting rules
+2. Your specific voice description
+3. Your writing principles
+4. Your target audience
+5. Your content topics
+6. Platform-specific formatting rules
