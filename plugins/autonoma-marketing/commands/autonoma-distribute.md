@@ -1,6 +1,6 @@
 ---
 description: Adapt approved content for multiple platforms while maintaining quality and brand voice. One piece becomes 3-5 platform-optimized versions.
-argument_hint: "[file path or paste content]"
+argument-hint: "[file path or paste content]"
 ---
 
 # Distribute Content

@@ -1,6 +1,6 @@
 ---
 description: Generate high-quality marketing content through a multi-step pipeline with automatic peer review and quality scoring.
-argument_hint: "[platform] [topic]"
+argument-hint: "[platform] [topic]"
 ---
 
 # Generate Content

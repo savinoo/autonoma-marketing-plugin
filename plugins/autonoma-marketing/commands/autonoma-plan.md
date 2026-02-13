@@ -1,6 +1,6 @@
 ---
 description: Create a data-driven editorial calendar with content pillars, topic prioritization, and weekly scheduling.
-argument_hint: "[business goals]"
+argument-hint: "[business goals]"
 ---
 
 # Editorial Calendar

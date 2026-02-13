@@ -1,6 +1,6 @@
 ---
 description: Research keywords, analyze search intent, and optimize content for search engines and AI discovery (GEO).
-argument_hint: "[topic or keyword]"
+argument-hint: "[topic or keyword]"
 ---
 
 # SEO Research

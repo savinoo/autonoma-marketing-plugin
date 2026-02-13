@@ -1,6 +1,6 @@
 ---
 description: Research current market trends, competitor moves, and industry developments. Produces actionable intelligence for content creation.
-argument_hint: "[research topic]"
+argument-hint: "[research topic]"
 ---
 
 # Trend Intelligence

@@ -1,6 +1,6 @@
 ---
 description: Peer-review existing content with a 6-dimension quality rubric. Get specific, actionable feedback with quality scores.
-argument_hint: "[file or paste content]"
+argument-hint: "[file or paste content]"
 ---
 
 # Review Content

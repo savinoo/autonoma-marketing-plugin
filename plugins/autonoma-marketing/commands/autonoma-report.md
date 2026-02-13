@@ -1,6 +1,6 @@
 ---
 description: Generate a weekly performance report analyzing content metrics, engagement patterns, and strategic recommendations.
-argument_hint: "[time period]"
+argument-hint: "[time period]"
 ---
 
 # Performance Report
